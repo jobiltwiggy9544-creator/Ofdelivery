@@ -1,0 +1,612 @@
+<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop All Products OFD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">OFD</a>
+        <div class="search-bar">
+          <input id="nav-search-input" type="text" placeholder="Search for products..." />
+          <button id="nav-search-btn" type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+       
+        </ul>
+        <div class="nav-icons">
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="loadingOverlay" aria-live="polite" aria-busy="false"><div class="loader" aria-label="Loading"></div></div>
+      <section class="shop-page container">
+        <h1>JEEVAN SAN NO PRODUCTS</h1>
+
+        <div class="shop-controls">
+          <div class="filter-control">
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter" name="category">
+              <option value="all">All Categories</option>
+              <option value="fruits">FOOD</option>
+              <option value="vegetables">CANDIES</option>
+              <option value="dairy">DRINK</option>
+              <option value="bakery">SPECIAL</option>
+            </select>
+          </div>
+  
+        </div>
+
+        <div id="product-grid-shop" class="product-grid"></div>
+      </section>
+    </main>
+    </style>
+</head>
+
+<body>
+</script>
+<h6 id="FOOD_SECTION">FOOD ITEMS</h6>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="フライドチキン" class="product-image">
+
+    <h3 class="product-name">FRIED CHICKEN</h3>
+
+    <p class="product-price">¥1</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="チップス" class="product-image">
+
+    <h3 class="product-name">CHIPS</h3>
+
+    <p class="product-price">¥2</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="パン" class="product-image">
+
+    <h3 class="product-name">BUN</h3>
+
+    <p class="product-price">¥3</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="おにぎり" class="product-image">
+
+    <h3 class="product-name">ONIGIRI</h3>
+
+    <p class="product-price">¥4</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="アイスクリーム" class="product-image">
+
+    <h3 class="product-name">ICE CREAM</h3>
+
+    <p class="product-price">¥5</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<h6 id="CANDIES_SECTION">CANDIES</h6>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="チョコレート" class="product-image">
+
+    <h3 class="product-name">CHOCOLATE</h3>
+
+    <p class="product-price">¥100</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="ハイチュウ" class="product-image">
+
+    <h3 class="product-name">HI CHEW</h3>
+
+    <p class="product-price">¥200</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="クッキー" class="product-image">
+
+    <h3 class="product-name">COOKIES</h3>
+
+    <p class="product-price">¥300</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="バブルガム" class="product-image">
+
+    <h3 class="product-name">BUBBLE GUM</h3>
+
+    <p class="product-price">¥400</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<h6 id="DRINKS_SECTION">DRINKS</h6>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="コーヒー" class="product-image">
+
+    <h3 class="product-name">COFFEE</h3>
+
+    <p class="product-price">¥10</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="スムージ" class="product-image">
+
+    <h3 class="product-name">SMOOTIE</h3>
+
+    <p class="product-price">¥20</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="レモンソーダ" class="product-image">
+
+    <h3 class="product-name">LEMON SODA</h3>
+
+    <p class="product-price">¥30</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="コカ・コーラ" class="product-image">
+
+    <h3 class="product-name">COCO COLA</h3>
+
+    <p class="product-price">¥40</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+<h6 id="SPECIALS_SECTION">SPECIALS</h6>
+<div class="product-card" 
+     data-name="Burger"
+     data-price="800"
+     data-category="food"
+     data-description="Juicy beef burger with fresh veggies."
+     data-image="images/burger.jpg">
+
+    <img src="images/burger.jpg" alt="" class="product-image">
+
+    <h3 class="product-name">NO SPECIAL PRODUCTS RIGHT NOW</h3>
+
+    <p class="product-price">¥0</p>
+
+    <button class="view-details-btn">View Details</button>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</div>
+</div>
+<div class="cart">
+<h3>Cart</h3>
+<div id="cartItems"></div>
+<p>Total: ¥<span id="total">0</span></p>
+
+<input id="name" class="order-input" placeholder="Your Name">
+<input id="custom" class="order-input" placeholder="Add a custom note or instructions">
+
+<br><br>
+
+<button onclick="sendOrder()" class="order-submit">Order Delivery</button>
+
+</div>
+
+<script>
+
+let cart=[]
+let total=0
+
+function addToCart(name,price){
+
+cart.push({name,price})
+total+=price
+
+displayCart()
+
+}
+
+function displayCart(){
+
+let list=""
+
+cart.forEach((item, index)=>{
+list += `<div class="cart-item">${item.name} ¥${item.price} <button class="remove-item-btn" data-index="${index}">Remove</button></div>`;
+})
+
+document.getElementById("cartItems").innerHTML=list
+document.getElementById("total").innerText=total
+updateCartCount()
+
+// Attach remove handlers after rendering
+const removeButtons = document.querySelectorAll('.remove-item-btn');
+removeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const index = parseInt(button.dataset.index, 10);
+    if (!Number.isNaN(index)) {
+      removeFromCart(index);
+    }
+  });
+});
+}
+
+function removeFromCart(index) {
+  if (index < 0 || index >= cart.length) return;
+  total -= cart[index].price;
+  cart.splice(index, 1);
+  displayCart();
+}
+
+function updateCartCount(){
+  const counter = document.querySelector('.cart-count')
+  if(!counter) return
+  counter.innerText = cart.length
+}
+
+function bindAddToCartButtons() {
+  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.product-card')
+      if (!card) return
+
+      const name = card.querySelector('.product-name')?.textContent.trim() || card.dataset.name || 'Item'
+      const price = parseFloat(card.dataset.price || '0') || 0
+      addToCart(name, price)
+    })
+  })
+}
+
+function bindCartIconScroll() {
+  const cartIcon = document.querySelector('.cart-icon');
+  const cartSection = document.querySelector('.cart');
+  if (cartIcon && cartSection) {
+    cartIcon.addEventListener('click', () => {
+      cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+}
+
+function syncProductPriceData() {
+  document.querySelectorAll('.product-card').forEach(card => {
+    const priceElement = card.querySelector('.product-price');
+    if (!priceElement) return;
+    const rawText = priceElement.textContent || '';
+    const num = parseFloat(rawText.replace(/[^0-9.]+/g, ''));
+    if (!Number.isNaN(num) && num >= 0) {
+      card.dataset.price = num;
+    }
+  });
+}
+
+function showLoadingOverlay(message = 'Please wait, sending order...') {
+  const overlay = document.getElementById('loadingOverlay');
+  if (!overlay) return;
+  overlay.setAttribute('aria-busy', 'true');
+  overlay.classList.add('show');
+}
+
+function hideLoadingOverlay() {
+  const overlay = document.getElementById('loadingOverlay');
+  if (!overlay) return;
+  overlay.setAttribute('aria-busy', 'false');
+  overlay.classList.remove('show');
+}
+
+function sendOrder(){
+  let name=document.getElementById("name").value
+  let customNote=document.getElementById("custom").value
+  let addressElement = document.getElementById("address");
+  let address = addressElement ? addressElement.value : "";
+
+  if (cart.length === 0) {
+    alert('Your cart is empty. Please add at least one item.');
+    return;
+  }
+
+  const orderData = {
+    items: cart.map(item => ({ name: item.name, price: item.price, quantity: item.quantity })),
+    total,
+    customerName: name,
+    customNote,
+    address,
+    orderedAt: new Date().toISOString(),
+  };
+
+  localStorage.setItem('ofd_last_order', JSON.stringify(orderData));
+  // --- SEND TO TELEGRAM HERE ---
+  const message =
+    `🍱 NEW ORDER\n\n` +
+    `👤 Name: ${name}\n` +
+    `🏠 Address: ${address}\n` +
+    `📝 Note: ${customNote}\n\n` +
+    `🛒 Items:\n` +
+    orderData.items.map(i => `• ${i.name} - ¥${i.price}`).join("\n") +
+    `\n\n💴 Total: ¥${total}\n` +
+    `⏰ Time: ${orderData.orderedAt}`;
+
+  fetch(`https://api.telegram.org/bot8314090413:AAGK7qxYrmfxGKlHlrY0pJE2KBnAVNjvuRY/sendMessage?chat_id=-1003570206716&text=${encodeURIComponent(message)}`);
+  showLoadingOverlay('Processing order...');
+  setTimeout(() => {
+    hideLoadingOverlay();
+    window.location.href = 'order.html';
+  }, 400);
+}
+
+// Scroll to section when category is selected
+const categoryScrollMap = {
+  fruits: "FOOD_SECTION",
+  vegetables: "CANDIES_SECTION",
+  dairy: "DRINKS_SECTION",
+  bakery: "SPECIALS_SECTION"
+};
+
+const categoryFilter = document.getElementById("category-filter");
+if (categoryFilter) {
+  categoryFilter.addEventListener("change", (event) => {
+    const category = event.target.value;
+    if (category === "all") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const targetId = categoryScrollMap[category];
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+}
+
+function scrollToCategoryFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  if (!category || category === "all") return;
+
+  const targetId = categoryScrollMap[category];
+  const targetEl = document.getElementById(targetId);
+
+  if (targetEl) {
+    targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Also sync dropdown state with query param
+    if (categoryFilter) {
+      categoryFilter.value = category;
+    }
+  }
+}
+
+function scrollToSearchResult() {
+  const searchInput = document.getElementById("nav-search-input");
+  const searchBtn = document.getElementById("nav-search-btn");
+
+  function findAndScroll() {
+    const term = (searchInput.value || "").trim().toLowerCase();
+    if (!term) return;
+
+    const sectionMap = {
+      food: "FOOD_SECTION",
+      fruits: "FOOD_SECTION",
+      candies: "CANDIES_SECTION",
+      vegetable: "CANDIES_SECTION",
+      vegetables: "CANDIES_SECTION",
+      drink: "DRINKS_SECTION",
+      drinks: "DRINKS_SECTION",
+      special: "SPECIALS_SECTION",
+      specials: "SPECIALS_SECTION",
+    };
+
+    if (sectionMap[term]) {
+      const section = document.getElementById(sectionMap[term]);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
+    const cards = Array.from(document.querySelectorAll(".product-card"));
+    const match = cards.find(card => {
+      const datasetName = (card.dataset.name || "").toLowerCase();
+      const datasetCategory = (card.dataset.category || "").toLowerCase();
+      const visibleName = (card.querySelector('.product-name')?.textContent || '').toLowerCase();
+      const visibleCategory = (card.querySelector('.product-category')?.textContent || '').toLowerCase();
+
+      const name = visibleName || datasetName;
+      const category = visibleCategory || datasetCategory;
+
+      return name.includes(term) || category.includes(term);
+    });
+
+    if (match) {
+      match.scrollIntoView({ behavior: "smooth", block: "start" });
+      match.classList.add("search-highlight");
+      setTimeout(() => match.classList.remove("search-highlight"), 1500);
+      return;
+    }
+
+    alert("No matching product or category found.");
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener("click", findAndScroll);
+  }
+  if (searchInput) {
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        findAndScroll();
+      }
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  syncProductPriceData();
+  scrollToCategoryFromQuery();
+  scrollToSearchResult();
+  bindAddToCartButtons();
+  bindCartIconScroll();
+  updateCartCount();
+});
+</script>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="current-year"></span> FASTEST,TRUSTED,7/11PRODUCTS,ONLY 30 YEN FOR DELIVERY SERVIES. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <button class="scroll-top-btn" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn" aria-label="Close cart popup">
+          &times;
+        </button>
+        <h2>Shopping Cart</h2>
+        <div id="cart-items-container">
+          <p class="cart-empty-msg" style="display: none">
+            Your cart is empty.
+          </p>
+        </div>
+        <div class="cart-summary">
+          <strong>Subtotal:</strong> <span id="cart-subtotal">¥0.00</span>
+        </div>
+        <div class="cart-actions">
+          <button class="btn btn-primary checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content product-detail-content">
+            <button class="close-modal-btn" aria-label="Close product details">&times;</button>
+            <div id="product-detail-container">
+                </div>
+        </div>
+      </div>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

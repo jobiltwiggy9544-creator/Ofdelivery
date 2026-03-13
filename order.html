@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Order | OFD</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background-color: #48e4c0; color: #1f1f1f; font-family: 'Nunito', sans-serif; margin: 0; }
+    .order-page { max-width: 900px; margin: 2rem auto; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 2rem; }
+    .order-page h1 { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; }
+    .order-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    .order-table th, .order-table td { text-align: left; border-bottom: 1px solid #ddd; padding: 0.75rem; }
+    .order-summary { font-size: 1.1rem; margin-bottom: 1rem; }
+    .order-footer { text-align: center; margin-top: 1.5rem; }
+    .btn-order { background: #227e68; color: white; border: none; border-radius: 24px; padding: 0.8rem 1.4rem; cursor: pointer; text-decoration: none; }
+    .btn-order:hover { background: #1a5e4f; }
+  </style>
+</head>
+<body>
+  <div class="order-page">
+    <h1>Your Order Receipt</h1>
+    <div id="order-details"></div>
+    <div class="order-footer">
+      <a class="btn-order" href="index.html">Return to Shop</a>
+      <h2>fastest delivery only 15min just for 30 yen</h2>
+    </div>
+  </div>
+  <script>
+    const orderDataJson = localStorage.getItem('ofd_last_order');
+    const orderDetails = document.getElementById('order-details');
+
+    if (!orderDataJson) {
+      orderDetails.innerHTML = '<p>Order not found. Please place your order first.</p>';
+    } else {
+      const data = JSON.parse(orderDataJson);
+      if (!data || !Array.isArray(data.items) || data.items.length === 0) {
+        orderDetails.innerHTML = '<p>No items in order. Please place your order first.</p>';
+      } else {
+        let html = '<p class="order-summary"><strong>Customer:</strong> ' + (data.customerName || 'Not provided') + '</p>';
+        if (data.customNote) {
+          html += '<p class="order-summary"><strong>Note:</strong> ' + data.customNote + '</p>';
+        }
+        if (data.address) {
+          html += '<p class="order-summary"><strong>Address:</strong> ' + data.address + '</p>';
+        }
+        html += '<table class="order-table"><thead><tr><th>Item</th><th>Price</th><th>Qty</th><th>Line Total</th></tr></thead><tbody>';
+
+        data.items.forEach(item => {
+          const lineTotal = (item.price * item.quantity).toFixed(2);
+          html += `<tr><td>${item.name}</td><td>¥${item.price}</td><td>${item.quantity}</td><td>¥${lineTotal}</td></tr>`;
+        });
+
+        html += '</tbody></table>';
+        html += '<p class="order-summary"><strong>Total Amount:</strong> ¥' + (data.total || 0) + '</p>';
+        html += '<p class="order-summary"><em>Order placed at: ' + new Date(data.orderedAt).toLocaleString() + '</em></p>';
+
+        orderDetails.innerHTML = html;
+      }
+    }
+</script>
+</body>
+</html>
