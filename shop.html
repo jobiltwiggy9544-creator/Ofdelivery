@@ -445,7 +445,8 @@ function sendOrder(){
   setTimeout(() => {
     hideLoadingOverlay();
     window.location.href = 'order.html';
-  }, 400);
+  }, 500);
+  .catch(err => console.error(err));
 }
 
 // Scroll to section when category is selected
