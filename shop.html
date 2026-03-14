@@ -440,14 +440,23 @@ function sendOrder(){
     `\n\n💴 Total: ¥${total}\n` +
     `⏰ Time: ${orderData.orderedAt}`;
 
-  fetch(`https://api.telegram.org/bot8314090413:AAGK7qxYrmfxGKlHlrY0pJE2KBnAVNjvuRY/sendMessage?chat_id=-1003570206716&text=${encodeURIComponent(message)}`);
-  showLoadingOverlay('Processing order...');
-  setTimeout(() => {
-    hideLoadingOverlay();
-    window.location.href = 'order.html';
-  }, 500);
-}
+  const telegramURL =
+    `https://api.telegram.org/bot8314090413:AAGK7qxYrmfxGKlHlrY0pJE2KBnAVNjvuRY/sendMessage?chat_id=-1003570206716&text=${encodeURIComponent(message)}`;
 
+  showLoadingOverlay('Processing order...');
+
+  fetch(telegramURL)
+    .then(() => {
+      setTimeout(() => {
+        hideLoadingOverlay();
+        window.location.href = 'order.html';
+      }, 500); // iPhone needs this delay
+    })
+    .catch(err => {
+      console.error("Telegram error:", err);
+      hideLoadingOverlay();
+    });
+}
 // Scroll to section when category is selected
 const categoryScrollMap = {
   fruits: "FOOD_SECTION",
