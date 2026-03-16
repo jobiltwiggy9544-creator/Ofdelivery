@@ -360,7 +360,7 @@ body.dark-mode .search-bar input::placeholder {
         /* Bottom layer: Background Image */    
         /* Replace 'images/hero-background.jpg' with the actual path to your image */
         /* Ensure the path is relative to your CSS file location */
-        url(bgj.jpg) no-repeat center center/cover;
+        img(bgj.jpg) no-repeat center center/cover;
         color: var(--light-bg);
     text-align: center;
     padding: 6rem 0;
